@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="practicaMaDModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="type_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.category_idFK" FromRole="Category" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Comenta">
+    <Key>
+      <PropertyRef Name="custumer_id" />
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="tag" />
+    </Key>
+    <Property Name="custumer_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="product_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="tag" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="comment" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="fecha" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="Custumer" Relationship="Self.custumer_idFK3" FromRole="Comenta" ToRole="Custumer" />
+    <NavigationProperty Name="Product" Relationship="Self.product_idFK3" FromRole="Comenta" ToRole="Product" />
+    <NavigationProperty Name="Tag1" Relationship="Self.tagFK" FromRole="Comenta" ToRole="Tag" />
+  </EntityType>
+  <EntityType Name="Credit_card">
+    <Key>
+      <PropertyRef Name="credit_card_number_int" />
+    </Key>
+    <Property Name="credit_card_number_int" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="tipo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="cvs" Type="Decimal" Precision="3" Scale="0" Nullable="false" />
+    <Property Name="date_pf_expiry" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="custumer_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <NavigationProperty Name="Custumer" Relationship="Self.custumer_idFK2" FromRole="Credit_card" ToRole="Custumer" />
+  </EntityType>
+  <EntityType Name="Custumer">
+    <Key>
+      <PropertyRef Name="custumer_id" />
+    </Key>
+    <Property Name="custumer_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="custumer_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="custumer_last_name1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="custumer_last_name2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="idioma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="rol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="credit_card_default" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="custumer_login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Comenta" Relationship="Self.custumer_idFK3" FromRole="Custumer" ToRole="Comenta" />
+    <NavigationProperty Name="Credit_card" Relationship="Self.custumer_idFK2" FromRole="Custumer" ToRole="Credit_card" />
+    <NavigationProperty Name="Orders" Relationship="Self.custumer_idFK" FromRole="Custumer" ToRole="Orders" />
+  </EntityType>
+  <EntityType Name="Orders">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="order_date" Type="DateTime" Precision="0" />
+    <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="total_price" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="custumer_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <NavigationProperty Name="Custumer" Relationship="Self.custumer_idFK" FromRole="Orders" ToRole="Custumer" />
+    <NavigationProperty Name="Producto_por_pedido" Relationship="Self.order_idFK" FromRole="Orders" ToRole="Producto_por_pedido" />
+  </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="product_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="price" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="discharge_date" Type="DateTime" Precision="0" />
+    <Property Name="stock" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="descripcion" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="category_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <NavigationProperty Name="Category" Relationship="Self.category_idFK" FromRole="Product" ToRole="Category" />
+    <NavigationProperty Name="Comenta" Relationship="Self.product_idFK3" FromRole="Product" ToRole="Comenta" />
+    <NavigationProperty Name="Producto_por_pedido" Relationship="Self.product_idFK" FromRole="Product" ToRole="Producto_por_pedido" />
+    <NavigationProperty Name="Properties" Relationship="Self.product_idFK2" FromRole="Product" ToRole="Properties" />
+  </EntityType>
+  <EntityType Name="Producto_por_pedido">
+    <Key>
+      <PropertyRef Name="order_id" />
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="order_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="product_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="units" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="price_unit" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <NavigationProperty Name="Orders" Relationship="Self.order_idFK" FromRole="Producto_por_pedido" ToRole="Orders" />
+    <NavigationProperty Name="Product" Relationship="Self.product_idFK" FromRole="Producto_por_pedido" ToRole="Product" />
+  </EntityType>
+  <EntityType Name="Properties">
+    <Key>
+      <PropertyRef Name="product_id" />
+      <PropertyRef Name="property_id" />
+    </Key>
+    <Property Name="product_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="property_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="properties_value" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Product" Relationship="Self.product_idFK2" FromRole="Properties" ToRole="Product" />
+    <NavigationProperty Name="Property" Relationship="Self.property_idFK" FromRole="Properties" ToRole="Property" />
+  </EntityType>
+  <EntityType Name="Property">
+    <Key>
+      <PropertyRef Name="property_id" />
+    </Key>
+    <Property Name="property_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="property_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="property_value" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Properties" Relationship="Self.property_idFK" FromRole="Property" ToRole="Properties" />
+  </EntityType>
+  <EntityType Name="Tag">
+    <Key>
+      <PropertyRef Name="tag_id" />
+    </Key>
+    <Property Name="tag_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="tag1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Comenta" Relationship="Self.tagFK" FromRole="Tag" ToRole="Comenta" />
+  </EntityType>
+  <Association Name="category_idFK">
+    <End Role="Category" Type="Self.Category" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Category">
+        <PropertyRef Name="type_id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="category_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="custumer_idFK3">
+    <End Role="Custumer" Type="Self.Custumer" Multiplicity="1" />
+    <End Role="Comenta" Type="Self.Comenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Custumer">
+        <PropertyRef Name="custumer_id" />
+      </Principal>
+      <Dependent Role="Comenta">
+        <PropertyRef Name="custumer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="product_idFK3">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Comenta" Type="Self.Comenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Comenta">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="tagFK">
+    <End Role="Tag" Type="Self.Tag" Multiplicity="1" />
+    <End Role="Comenta" Type="Self.Comenta" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Tag">
+        <PropertyRef Name="tag_id" />
+      </Principal>
+      <Dependent Role="Comenta">
+        <PropertyRef Name="tag" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="custumer_idFK2">
+    <End Role="Custumer" Type="Self.Custumer" Multiplicity="1" />
+    <End Role="Credit_card" Type="Self.Credit_card" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Custumer">
+        <PropertyRef Name="custumer_id" />
+      </Principal>
+      <Dependent Role="Credit_card">
+        <PropertyRef Name="custumer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="custumer_idFK">
+    <End Role="Custumer" Type="Self.Custumer" Multiplicity="1" />
+    <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Custumer">
+        <PropertyRef Name="custumer_id" />
+      </Principal>
+      <Dependent Role="Orders">
+        <PropertyRef Name="custumer_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="order_idFK">
+    <End Role="Orders" Type="Self.Orders" Multiplicity="1" />
+    <End Role="Producto_por_pedido" Type="Self.Producto_por_pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Orders">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="Producto_por_pedido">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="product_idFK">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Producto_por_pedido" Type="Self.Producto_por_pedido" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Producto_por_pedido">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="product_idFK2">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Properties" Type="Self.Properties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="Properties">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="property_idFK">
+    <End Role="Property" Type="Self.Property" Multiplicity="1" />
+    <End Role="Properties" Type="Self.Properties" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Property">
+        <PropertyRef Name="property_id" />
+      </Principal>
+      <Dependent Role="Properties">
+        <PropertyRef Name="property_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="practicaMaDEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Category" EntityType="Self.Category" />
+    <EntitySet Name="Comenta" EntityType="Self.Comenta" />
+    <EntitySet Name="Credit_card" EntityType="Self.Credit_card" />
+    <EntitySet Name="Custumer" EntityType="Self.Custumer" />
+    <EntitySet Name="Orders" EntityType="Self.Orders" />
+    <EntitySet Name="Product" EntityType="Self.Product" />
+    <EntitySet Name="Producto_por_pedido" EntityType="Self.Producto_por_pedido" />
+    <EntitySet Name="Properties" EntityType="Self.Properties" />
+    <EntitySet Name="Property" EntityType="Self.Property" />
+    <EntitySet Name="Tag" EntityType="Self.Tag" />
+    <AssociationSet Name="category_idFK" Association="Self.category_idFK">
+      <End Role="Category" EntitySet="Category" />
+      <End Role="Product" EntitySet="Product" />
+    </AssociationSet>
+    <AssociationSet Name="custumer_idFK3" Association="Self.custumer_idFK3">
+      <End Role="Custumer" EntitySet="Custumer" />
+      <End Role="Comenta" EntitySet="Comenta" />
+    </AssociationSet>
+    <AssociationSet Name="product_idFK3" Association="Self.product_idFK3">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Comenta" EntitySet="Comenta" />
+    </AssociationSet>
+    <AssociationSet Name="tagFK" Association="Self.tagFK">
+      <End Role="Tag" EntitySet="Tag" />
+      <End Role="Comenta" EntitySet="Comenta" />
+    </AssociationSet>
+    <AssociationSet Name="custumer_idFK2" Association="Self.custumer_idFK2">
+      <End Role="Custumer" EntitySet="Custumer" />
+      <End Role="Credit_card" EntitySet="Credit_card" />
+    </AssociationSet>
+    <AssociationSet Name="custumer_idFK" Association="Self.custumer_idFK">
+      <End Role="Custumer" EntitySet="Custumer" />
+      <End Role="Orders" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="order_idFK" Association="Self.order_idFK">
+      <End Role="Orders" EntitySet="Orders" />
+      <End Role="Producto_por_pedido" EntitySet="Producto_por_pedido" />
+    </AssociationSet>
+    <AssociationSet Name="product_idFK" Association="Self.product_idFK">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Producto_por_pedido" EntitySet="Producto_por_pedido" />
+    </AssociationSet>
+    <AssociationSet Name="product_idFK2" Association="Self.product_idFK2">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="Properties" EntitySet="Properties" />
+    </AssociationSet>
+    <AssociationSet Name="property_idFK" Association="Self.property_idFK">
+      <End Role="Property" EntitySet="Property" />
+      <End Role="Properties" EntitySet="Properties" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

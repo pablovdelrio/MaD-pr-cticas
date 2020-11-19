@@ -1,0 +1,113 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="practicaMaDModelStoreContainer" CdmEntityContainer="practicaMaDEntities">
+    <EntitySetMapping Name="Category">
+      <EntityTypeMapping TypeName="practicaMaDModel.Category">
+        <MappingFragment StoreEntitySet="Category">
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Comenta">
+      <EntityTypeMapping TypeName="practicaMaDModel.Comenta">
+        <MappingFragment StoreEntitySet="Comenta">
+          <ScalarProperty Name="custumer_id" ColumnName="custumer_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="tag" ColumnName="tag" />
+          <ScalarProperty Name="comment" ColumnName="comment" />
+          <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Credit_card">
+      <EntityTypeMapping TypeName="practicaMaDModel.Credit_card">
+        <MappingFragment StoreEntitySet="Credit_card">
+          <ScalarProperty Name="credit_card_number_int" ColumnName="credit_card_number_int" />
+          <ScalarProperty Name="tipo" ColumnName="tipo" />
+          <ScalarProperty Name="cvs" ColumnName="cvs" />
+          <ScalarProperty Name="date_pf_expiry" ColumnName="date_pf_expiry" />
+          <ScalarProperty Name="custumer_id" ColumnName="custumer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Custumer">
+      <EntityTypeMapping TypeName="practicaMaDModel.Custumer">
+        <MappingFragment StoreEntitySet="Custumer">
+          <ScalarProperty Name="custumer_id" ColumnName="custumer_id" />
+          <ScalarProperty Name="custumer_name" ColumnName="custumer_name" />
+          <ScalarProperty Name="custumer_last_name1" ColumnName="custumer_last_name1" />
+          <ScalarProperty Name="custumer_last_name2" ColumnName="custumer_last_name2" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="idioma" ColumnName="idioma" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="credit_card_default" ColumnName="credit_card_default" />
+          <ScalarProperty Name="custumer_login" ColumnName="custumer_login" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Orders">
+      <EntityTypeMapping TypeName="practicaMaDModel.Orders">
+        <MappingFragment StoreEntitySet="Orders">
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="order_date" ColumnName="order_date" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="total_price" ColumnName="total_price" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="custumer_id" ColumnName="custumer_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="practicaMaDModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="price" ColumnName="price" />
+          <ScalarProperty Name="discharge_date" ColumnName="discharge_date" />
+          <ScalarProperty Name="stock" ColumnName="stock" />
+          <ScalarProperty Name="descripcion" ColumnName="descripcion" />
+          <ScalarProperty Name="category_id" ColumnName="category_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Producto_por_pedido">
+      <EntityTypeMapping TypeName="practicaMaDModel.Producto_por_pedido">
+        <MappingFragment StoreEntitySet="Producto_por_pedido">
+          <ScalarProperty Name="order_id" ColumnName="order_id" />
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="units" ColumnName="units" />
+          <ScalarProperty Name="price_unit" ColumnName="price_unit" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Properties">
+      <EntityTypeMapping TypeName="practicaMaDModel.Properties">
+        <MappingFragment StoreEntitySet="Properties">
+          <ScalarProperty Name="product_id" ColumnName="product_id" />
+          <ScalarProperty Name="property_id" ColumnName="property_id" />
+          <ScalarProperty Name="properties_value" ColumnName="properties_value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Property">
+      <EntityTypeMapping TypeName="practicaMaDModel.Property">
+        <MappingFragment StoreEntitySet="Property">
+          <ScalarProperty Name="property_id" ColumnName="property_id" />
+          <ScalarProperty Name="property_name" ColumnName="property_name" />
+          <ScalarProperty Name="property_value" ColumnName="property_value" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Tag">
+      <EntityTypeMapping TypeName="practicaMaDModel.Tag">
+        <MappingFragment StoreEntitySet="Tag">
+          <ScalarProperty Name="tag_id" ColumnName="tag_id" />
+          <ScalarProperty Name="tag1" ColumnName="tag" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
