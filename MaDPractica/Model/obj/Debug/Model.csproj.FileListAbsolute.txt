@@ -13,8 +13,11 @@ F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\bin\Debug\Microsof
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\bin\Debug\Ninject.xml
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\bin\Debug\Ninject.Extensions.Interception.xml
-F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\obj\Debug\Model.csprojAssemblyReference.cache
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\obj\Debug\Model.csproj.CopyComplete
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\obj\Debug\Model.dll
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\obj\Debug\Model.pdb
+F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\obj\Debug\Model.csprojAssemblyReference.cache
+F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\bin\Debug\ModelUtil.dll
+F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\bin\Debug\ModelUtil.pdb
+F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\bin\Debug\ModelUtil.dll.config
