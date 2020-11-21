@@ -9,15 +9,31 @@
   </EntityType>
   <EntityType Name="Comenta">
     <Key>
-      <PropertyRef Name="custumer_id" />
+      <PropertyRef Name="costumer_id" />
       <PropertyRef Name="product_id" />
       <PropertyRef Name="tag" />
     </Key>
-    <Property Name="custumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="costumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="product_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="tag" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="comment" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="fecha" Type="date" />
+  </EntityType>
+  <EntityType Name="Costumer">
+    <Key>
+      <PropertyRef Name="costumer_id" />
+    </Key>
+    <Property Name="costumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="costumer_name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="costumer_last_name1" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="costumer_last_name2" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="direccion" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="idioma" Type="varchar" MaxLength="50" />
+    <Property Name="country" Type="varchar" MaxLength="50" />
+    <Property Name="rol" Type="varchar" MaxLength="50" />
+    <Property Name="credit_card_default" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="costumer_login" Type="varchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="Credit_card">
     <Key>
@@ -27,7 +43,7 @@
     <Property Name="tipo" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="cvs" Type="numeric" Precision="3" Scale="0" Nullable="false" />
     <Property Name="date_pf_expiry" Type="date" Nullable="false" />
-    <Property Name="custumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="costumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
   </EntityType>
   <EntityType Name="Custumer">
     <Key>
@@ -54,7 +70,7 @@
     <Property Name="direccion" Type="varchar" MaxLength="50" Nullable="false" />
     <Property Name="total_price" Type="numeric" Precision="10" Scale="0" Nullable="false" />
     <Property Name="descripcion" Type="varchar" MaxLength="100" />
-    <Property Name="custumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
+    <Property Name="costumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -114,39 +130,39 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="custumer_idFK">
-    <End Role="Custumer" Type="Self.Custumer" Multiplicity="1" />
+  <Association Name="costumer_idFK">
+    <End Role="Costumer" Type="Self.Costumer" Multiplicity="1" />
     <End Role="Orders" Type="Self.Orders" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Custumer">
-        <PropertyRef Name="custumer_id" />
+      <Principal Role="Costumer">
+        <PropertyRef Name="costumer_id" />
       </Principal>
       <Dependent Role="Orders">
-        <PropertyRef Name="custumer_id" />
+        <PropertyRef Name="costumer_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="custumer_idFK2">
-    <End Role="Custumer" Type="Self.Custumer" Multiplicity="1" />
+  <Association Name="costumer_idFK2">
+    <End Role="Costumer" Type="Self.Costumer" Multiplicity="1" />
     <End Role="Credit_card" Type="Self.Credit_card" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Custumer">
-        <PropertyRef Name="custumer_id" />
+      <Principal Role="Costumer">
+        <PropertyRef Name="costumer_id" />
       </Principal>
       <Dependent Role="Credit_card">
-        <PropertyRef Name="custumer_id" />
+        <PropertyRef Name="costumer_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="custumer_idFK3">
-    <End Role="Custumer" Type="Self.Custumer" Multiplicity="1" />
+  <Association Name="costumer_idFK3">
+    <End Role="Costumer" Type="Self.Costumer" Multiplicity="1" />
     <End Role="Comenta" Type="Self.Comenta" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="Custumer">
-        <PropertyRef Name="custumer_id" />
+      <Principal Role="Costumer">
+        <PropertyRef Name="costumer_id" />
       </Principal>
       <Dependent Role="Comenta">
-        <PropertyRef Name="custumer_id" />
+        <PropertyRef Name="costumer_id" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -225,6 +241,7 @@
   <EntityContainer Name="practicaMaDModelStoreContainer">
     <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Comenta" EntityType="Self.Comenta" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Costumer" EntityType="Self.Costumer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Credit_card" EntityType="Self.Credit_card" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Custumer" EntityType="Self.Custumer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
@@ -237,16 +254,16 @@
       <End Role="Category" EntitySet="Category" />
       <End Role="Product" EntitySet="Product" />
     </AssociationSet>
-    <AssociationSet Name="custumer_idFK" Association="Self.custumer_idFK">
-      <End Role="Custumer" EntitySet="Custumer" />
+    <AssociationSet Name="costumer_idFK" Association="Self.costumer_idFK">
+      <End Role="Costumer" EntitySet="Costumer" />
       <End Role="Orders" EntitySet="Orders" />
     </AssociationSet>
-    <AssociationSet Name="custumer_idFK2" Association="Self.custumer_idFK2">
-      <End Role="Custumer" EntitySet="Custumer" />
+    <AssociationSet Name="costumer_idFK2" Association="Self.costumer_idFK2">
+      <End Role="Costumer" EntitySet="Costumer" />
       <End Role="Credit_card" EntitySet="Credit_card" />
     </AssociationSet>
-    <AssociationSet Name="custumer_idFK3" Association="Self.custumer_idFK3">
-      <End Role="Custumer" EntitySet="Custumer" />
+    <AssociationSet Name="costumer_idFK3" Association="Self.costumer_idFK3">
+      <End Role="Costumer" EntitySet="Costumer" />
       <End Role="Comenta" EntitySet="Comenta" />
     </AssociationSet>
     <AssociationSet Name="order_idFK" Association="Self.order_idFK">

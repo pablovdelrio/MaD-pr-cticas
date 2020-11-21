@@ -25,9 +25,9 @@ namespace Es.Udc.DotNet.MaDPractica.Model
         public string direccion { get; set; }
         public decimal total_price { get; set; }
         public string descripcion { get; set; }
-        public decimal custumer_id { get; set; }
+        public decimal costumer_id { get; set; }
     
-        public virtual Custumer Custumer { get; set; }
+        public virtual Costumer Costumer { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Producto_por_pedido> Producto_por_pedido { get; set; }
     }

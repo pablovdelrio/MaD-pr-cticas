@@ -18,8 +18,8 @@ namespace Es.Udc.DotNet.MaDPractica.Model
         public string tipo { get; set; }
         public decimal cvs { get; set; }
         public System.DateTime date_pf_expiry { get; set; }
-        public decimal custumer_id { get; set; }
+        public decimal costumer_id { get; set; }
     
-        public virtual Custumer Custumer { get; set; }
+        public virtual Costumer Costumer { get; set; }
     }
 }

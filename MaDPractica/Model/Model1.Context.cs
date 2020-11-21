@@ -27,8 +27,8 @@ namespace Es.Udc.DotNet.MaDPractica.Model
     
         public virtual DbSet<Category> Category { get; set; }
         public virtual DbSet<Comenta> Comenta { get; set; }
+        public virtual DbSet<Costumer> Costumer { get; set; }
         public virtual DbSet<Credit_card> Credit_card { get; set; }
-        public virtual DbSet<Custumer> Custumer { get; set; }
         public virtual DbSet<Orders> Orders { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<Producto_por_pedido> Producto_por_pedido { get; set; }

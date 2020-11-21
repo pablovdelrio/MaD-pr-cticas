@@ -12,11 +12,28 @@
     <EntitySetMapping Name="Comenta">
       <EntityTypeMapping TypeName="practicaMaDModel.Comenta">
         <MappingFragment StoreEntitySet="Comenta">
-          <ScalarProperty Name="custumer_id" ColumnName="custumer_id" />
+          <ScalarProperty Name="costumer_id" ColumnName="costumer_id" />
           <ScalarProperty Name="product_id" ColumnName="product_id" />
           <ScalarProperty Name="tag" ColumnName="tag" />
           <ScalarProperty Name="comment" ColumnName="comment" />
           <ScalarProperty Name="fecha" ColumnName="fecha" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Costumer">
+      <EntityTypeMapping TypeName="practicaMaDModel.Costumer">
+        <MappingFragment StoreEntitySet="Costumer">
+          <ScalarProperty Name="costumer_id" ColumnName="costumer_id" />
+          <ScalarProperty Name="costumer_name" ColumnName="costumer_name" />
+          <ScalarProperty Name="costumer_last_name1" ColumnName="costumer_last_name1" />
+          <ScalarProperty Name="costumer_last_name2" ColumnName="costumer_last_name2" />
+          <ScalarProperty Name="direccion" ColumnName="direccion" />
+          <ScalarProperty Name="email" ColumnName="email" />
+          <ScalarProperty Name="idioma" ColumnName="idioma" />
+          <ScalarProperty Name="country" ColumnName="country" />
+          <ScalarProperty Name="rol" ColumnName="rol" />
+          <ScalarProperty Name="credit_card_default" ColumnName="credit_card_default" />
+          <ScalarProperty Name="costumer_login" ColumnName="costumer_login" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -27,7 +44,7 @@
           <ScalarProperty Name="tipo" ColumnName="tipo" />
           <ScalarProperty Name="cvs" ColumnName="cvs" />
           <ScalarProperty Name="date_pf_expiry" ColumnName="date_pf_expiry" />
-          <ScalarProperty Name="custumer_id" ColumnName="custumer_id" />
+          <ScalarProperty Name="costumer_id" ColumnName="costumer_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -56,7 +73,7 @@
           <ScalarProperty Name="direccion" ColumnName="direccion" />
           <ScalarProperty Name="total_price" ColumnName="total_price" />
           <ScalarProperty Name="descripcion" ColumnName="descripcion" />
-          <ScalarProperty Name="custumer_id" ColumnName="custumer_id" />
+          <ScalarProperty Name="costumer_id" ColumnName="costumer_id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

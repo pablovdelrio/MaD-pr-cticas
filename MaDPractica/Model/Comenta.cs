@@ -14,13 +14,13 @@ namespace Es.Udc.DotNet.MaDPractica.Model
     
     public partial class Comenta
     {
-        public decimal custumer_id { get; set; }
+        public decimal costumer_id { get; set; }
         public decimal product_id { get; set; }
         public decimal tag { get; set; }
         public string comment { get; set; }
         public Nullable<System.DateTime> fecha { get; set; }
     
-        public virtual Custumer Custumer { get; set; }
+        public virtual Costumer Costumer { get; set; }
         public virtual Product Product { get; set; }
         public virtual Tag Tag1 { get; set; }
     }

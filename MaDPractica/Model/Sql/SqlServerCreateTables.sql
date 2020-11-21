@@ -9,23 +9,23 @@ DROP TABLE Product;
 DROP TABLE Tag;
 DROP TABLE Category;
 DROP TABLE Property;
-DROP TABLE Custumer;
+DROP TABLE Costumer;
 
-CREATE TABLE Custumer(
+CREATE TABLE Costumer(
 
-    custumer_id NUMERIC(10,0) NOT NULL,
-    custumer_name VARCHAR(50) NOT NULL,
-    custumer_last_name1 VARCHAR(50) NOT NULL,
-    custumer_last_name2 VARCHAR(50) NOT NULL,
+    costumer_id NUMERIC(10,0) NOT NULL,
+    costumer_name VARCHAR(50) NOT NULL,
+    costumer_last_name1 VARCHAR(50) NOT NULL,
+    costumer_last_name2 VARCHAR(50) NOT NULL,
     direccion VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL,
     idioma VARCHAR(50),
     country VARCHAR(50),
     rol VARCHAR(50),
     credit_card_default VARCHAR(50) NOT NULL,
-    custumer_login VARCHAR(50) NOT NULL,
+    costumer_login VARCHAR(50) NOT NULL,
 
-    CONSTRAINT custumerPK PRIMARY KEY (custumer_id)
+    CONSTRAINT costumerPK PRIMARY KEY (costumer_id)
 
 );
 
@@ -36,13 +36,13 @@ CREATE TABLE Orders(
     direccion VARCHAR(50) NOT NULL,
     total_price NUMERIC(10,0) NOT NULL,
     descripcion VARCHAR(100),
-    custumer_id NUMERIC(10,0) NOT NULL
+    costumer_id NUMERIC(10,0) NOT NULL
     
     CONSTRAINT OrdersPK PRIMARY KEY (order_id),
 
-    CONSTRAINT custumer_idFK
-     FOREIGN KEY (custumer_id)
-     REFERENCES Custumer(custumer_id)
+    CONSTRAINT costumer_idFK
+     FOREIGN KEY (costumer_id)
+     REFERENCES Costumer(costumer_id)
 
 );
 
@@ -52,13 +52,13 @@ CREATE TABLE Credit_card(
     tipo VARCHAR(50) NOT NULL,
     cvs NUMERIC(3,0) NOT NULL,
     date_pf_expiry DATE NOT NULL,
-    custumer_id NUMERIC(10,0) NOT NULL,
+    costumer_id NUMERIC(10,0) NOT NULL,
 
     CONSTRAINT Creadit_cardPK PRIMARY KEY (credit_card_number_int),
 
-    CONSTRAINT custumer_idFK2
-     FOREIGN KEY (custumer_id)
-     REFERENCES Custumer(custumer_id)
+    CONSTRAINT costumer_idFK2
+     FOREIGN KEY (costumer_id)
+     REFERENCES Costumer(costumer_id)
 
 );
 
@@ -146,17 +146,17 @@ CREATE TABLE Properties(
 
 CREATE TABLE Comenta(
 
-    custumer_id NUMERIC(10,0) NOT NULL,
+    costumer_id NUMERIC(10,0) NOT NULL,
     product_id NUMERIC(10,0) NOT NULL,
     tag NUMERIC(10,0) NOT NULL,
     comment VARCHAR(50) NOT NULL,
     fecha DATE,
 
-    CONSTRAINT ComentarioPK PRIMARY KEY (custumer_id,product_id,tag),
+    CONSTRAINT ComentarioPK PRIMARY KEY (costumer_id,product_id,tag),
 
-    CONSTRAINT custumer_idFK3
-     FOREIGN KEY (custumer_id)
-     REFERENCES Custumer(custumer_id),
+    CONSTRAINT costumer_idFK3
+     FOREIGN KEY (costumer_id)
+     REFERENCES Costumer(costumer_id),
 
     CONSTRAINT product_idFK3
      FOREIGN KEY (product_id)

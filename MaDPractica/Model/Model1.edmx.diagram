@@ -4,23 +4,24 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="e2126733c0e04e359a09ccfbe1fd54a2" Name="Diagram1">
+      <Diagram DiagramId="3b8a1b8347704be8917aa86825a02424" Name="Diagram1">
         <EntityTypeShape EntityType="practicaMaDModel.Category" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
         <EntityTypeShape EntityType="practicaMaDModel.Comenta" Width="1.5" PointX="5.25" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="practicaMaDModel.Costumer" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
         <EntityTypeShape EntityType="practicaMaDModel.Credit_card" Width="1.5" PointX="5.25" PointY="12.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="practicaMaDModel.Custumer" Width="1.5" PointX="3" PointY="8.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="practicaMaDModel.Custumer" Width="1.5" PointX="8.75" PointY="8" IsExpanded="true" />
         <EntityTypeShape EntityType="practicaMaDModel.Orders" Width="1.5" PointX="6" PointY="8.375" IsExpanded="true" />
         <EntityTypeShape EntityType="practicaMaDModel.Product" Width="1.5" PointX="3" PointY="4.125" IsExpanded="true" />
         <EntityTypeShape EntityType="practicaMaDModel.Producto_por_pedido" Width="1.5" PointX="8.25" PointY="4.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="practicaMaDModel.Properties" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="practicaMaDModel.Properties" Width="1.5" PointX="5.25" PointY="1.625" IsExpanded="true" />
         <EntityTypeShape EntityType="practicaMaDModel.Property" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="practicaMaDModel.Tag" Width="1.5" PointX="3" PointY="13.125" IsExpanded="true" />
         <AssociationConnector Association="practicaMaDModel.category_idFK" ManuallyRouted="false" />
-        <AssociationConnector Association="practicaMaDModel.custumer_idFK3" ManuallyRouted="false" />
+        <AssociationConnector Association="practicaMaDModel.costumer_idFK3" ManuallyRouted="false" />
         <AssociationConnector Association="practicaMaDModel.product_idFK3" ManuallyRouted="false" />
         <AssociationConnector Association="practicaMaDModel.tagFK" ManuallyRouted="false" />
-        <AssociationConnector Association="practicaMaDModel.custumer_idFK2" ManuallyRouted="false" />
-        <AssociationConnector Association="practicaMaDModel.custumer_idFK" ManuallyRouted="false" />
+        <AssociationConnector Association="practicaMaDModel.costumer_idFK" ManuallyRouted="false" />
+        <AssociationConnector Association="practicaMaDModel.costumer_idFK2" ManuallyRouted="false" />
         <AssociationConnector Association="practicaMaDModel.order_idFK" ManuallyRouted="false" />
         <AssociationConnector Association="practicaMaDModel.product_idFK" ManuallyRouted="false" />
         <AssociationConnector Association="practicaMaDModel.product_idFK2" ManuallyRouted="false" />
