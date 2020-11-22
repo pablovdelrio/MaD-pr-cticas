@@ -1,6 +1,9 @@
 ﻿using Es.Udc.DotNet.ModelUtil.Dao;
 using Es.Udc.DotNet.ModelUtil.Exceptions;
 using System;
+using System.Collections.Generic;
+using System.Data.Common;
+using System.Linq;
 
 namespace Es.Udc.DotNet.MaDPractica.Model.OrdersDao
 {
@@ -48,6 +51,27 @@ namespace Es.Udc.DotNet.MaDPractica.Model.OrdersDao
                     typeof(Orders).FullName);
 
             return orders;
+        }
+
+        /// <summary>
+        /// List orders of costumer
+        /// </summary>
+        /// <param id="CostumerId">id</param>
+        /// <returns>The list of Orders</returns>
+        /// <exception cref="InstanceNotFoundException"/>
+        public List<Orders> FindOrders(Decimal costumer_Id)
+        {
+            string sqlQuery = " Select * FROM Orders " +
+                              " where costumer_Id=@costumer_Id ";
+
+            DbParameter costumerIdParameter =
+                new System.Data.SqlClient.SqlParameter("account_Id", costumer_Id);
+
+            object[] parameters = new object[] { costumerIdParameter };
+
+            List<Orders> result = Context.Database.SqlQuery<Orders>(sqlQuery, parameters).ToList<Orders>();
+
+            return result;
         }
         #endregion IOrdersDao Members
     }
