@@ -16,5 +16,13 @@ namespace Es.Udc.DotNet.MaDPractica.Model.CostumerDao
         /// <returns>The Costumer</returns>
         /// <exception cref="InstanceNotFoundException"/>
         Costumer FindByCostumerId(Decimal costumerId);
+
+        /// <summary>
+        /// Update a Costumer
+        /// </summary>
+        /// <param costumer="costumerId">loginName</param>
+        /// <returns>The new Costumer</returns>
+        /// <exception cref="InstancNotFoundException"/>
+    //public void UpdateCostumer(Decimal costumerId,String direccion,String email,String idioma,String country);
     }
 }

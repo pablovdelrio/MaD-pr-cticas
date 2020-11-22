@@ -45,22 +45,6 @@
     <Property Name="date_pf_expiry" Type="date" Nullable="false" />
     <Property Name="costumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
   </EntityType>
-  <EntityType Name="Custumer">
-    <Key>
-      <PropertyRef Name="custumer_id" />
-    </Key>
-    <Property Name="custumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
-    <Property Name="custumer_name" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="custumer_last_name1" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="custumer_last_name2" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="direccion" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="idioma" Type="varchar" MaxLength="50" />
-    <Property Name="country" Type="varchar" MaxLength="50" />
-    <Property Name="rol" Type="varchar" MaxLength="50" />
-    <Property Name="credit_card_default" Type="varchar" MaxLength="50" Nullable="false" />
-    <Property Name="custumer_login" Type="varchar" MaxLength="50" Nullable="false" />
-  </EntityType>
   <EntityType Name="Orders">
     <Key>
       <PropertyRef Name="order_id" />
@@ -243,7 +227,6 @@
     <EntitySet Name="Comenta" EntityType="Self.Comenta" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Costumer" EntityType="Self.Costumer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Credit_card" EntityType="Self.Credit_card" Schema="dbo" store:Type="Tables" />
-    <EntitySet Name="Custumer" EntityType="Self.Custumer" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Producto_por_pedido" EntityType="Self.Producto_por_pedido" Schema="dbo" store:Type="Tables" />

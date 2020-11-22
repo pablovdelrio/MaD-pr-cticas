@@ -53,22 +53,6 @@
     <Property Name="costumer_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
     <NavigationProperty Name="Costumer" Relationship="Self.costumer_idFK2" FromRole="Credit_card" ToRole="Costumer" />
   </EntityType>
-  <EntityType Name="Custumer">
-    <Key>
-      <PropertyRef Name="custumer_id" />
-    </Key>
-    <Property Name="custumer_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
-    <Property Name="custumer_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="custumer_last_name1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="custumer_last_name2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="idioma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="rol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-    <Property Name="credit_card_default" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="custumer_login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-  </EntityType>
   <EntityType Name="Orders">
     <Key>
       <PropertyRef Name="order_id" />
@@ -247,7 +231,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="property_idFK">
-    <End Role="Property" Type="Self.Property" Multiplicity="1" />
+    <End Role="Property" Type="practicaMaDModel.Property" Multiplicity="1" />
     <End Role="Properties" Type="Self.Properties" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Property">
@@ -263,12 +247,11 @@
     <EntitySet Name="Comenta" EntityType="Self.Comenta" />
     <EntitySet Name="Costumer" EntityType="Self.Costumer" />
     <EntitySet Name="Credit_card" EntityType="Self.Credit_card" />
-    <EntitySet Name="Custumer" EntityType="Self.Custumer" />
     <EntitySet Name="Orders" EntityType="Self.Orders" />
     <EntitySet Name="Product" EntityType="Self.Product" />
     <EntitySet Name="Producto_por_pedido" EntityType="Self.Producto_por_pedido" />
     <EntitySet Name="Properties" EntityType="Self.Properties" />
-    <EntitySet Name="Property" EntityType="Self.Property" />
+    <EntitySet Name="Property" EntityType="practicaMaDModel.Property" />
     <EntitySet Name="Tag" EntityType="Self.Tag" />
     <AssociationSet Name="category_idFK" Association="Self.category_idFK">
       <End Role="Category" EntitySet="Category" />

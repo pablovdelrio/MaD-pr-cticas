@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\MaDPractica",
-    "\\MaDPractica\\Model"
+    "\\MaDPractica\\Model",
+    "\\MaDPractica\\Model\\Sql"
   ],
-  "SelectedNode": "\\MaDPractica\\Model",
+  "SelectedNode": "\\MaDPractica\\Model\\Sql\\SqlServerCreateTables.sql",
   "PreviewInSolutionExplorer": false
 }

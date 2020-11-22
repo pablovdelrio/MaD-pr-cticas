@@ -50,22 +50,6 @@
           <Property Name="date_pf_expiry" Type="date" Nullable="false" />
           <Property Name="costumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
         </EntityType>
-        <EntityType Name="Custumer">
-          <Key>
-            <PropertyRef Name="custumer_id" />
-          </Key>
-          <Property Name="custumer_id" Type="numeric" Precision="10" Scale="0" Nullable="false" />
-          <Property Name="custumer_name" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="custumer_last_name1" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="custumer_last_name2" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="direccion" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="email" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="idioma" Type="varchar" MaxLength="50" />
-          <Property Name="country" Type="varchar" MaxLength="50" />
-          <Property Name="rol" Type="varchar" MaxLength="50" />
-          <Property Name="credit_card_default" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="custumer_login" Type="varchar" MaxLength="50" Nullable="false" />
-        </EntityType>
         <EntityType Name="Orders">
           <Key>
             <PropertyRef Name="order_id" />
@@ -248,7 +232,6 @@
           <EntitySet Name="Comenta" EntityType="Self.Comenta" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Costumer" EntityType="Self.Costumer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Credit_card" EntityType="Self.Credit_card" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="Custumer" EntityType="Self.Custumer" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Orders" EntityType="Self.Orders" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Producto_por_pedido" EntityType="Self.Producto_por_pedido" Schema="dbo" store:Type="Tables" />
@@ -353,22 +336,6 @@
           <Property Name="date_pf_expiry" Type="DateTime" Nullable="false" Precision="0" />
           <Property Name="costumer_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
           <NavigationProperty Name="Costumer" Relationship="Self.costumer_idFK2" FromRole="Credit_card" ToRole="Costumer" />
-        </EntityType>
-        <EntityType Name="Custumer">
-          <Key>
-            <PropertyRef Name="custumer_id" />
-          </Key>
-          <Property Name="custumer_id" Type="Decimal" Precision="10" Scale="0" Nullable="false" />
-          <Property Name="custumer_name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="custumer_last_name1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="custumer_last_name2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="direccion" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="idioma" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="rol" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="credit_card_default" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="custumer_login" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
         </EntityType>
         <EntityType Name="Orders">
           <Key>
@@ -548,7 +515,7 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="property_idFK">
-          <End Role="Property" Type="Self.Property" Multiplicity="1" />
+          <End Role="Property" Type="practicaMaDModel.Property" Multiplicity="1" />
           <End Role="Properties" Type="Self.Properties" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Property">
@@ -564,12 +531,11 @@
           <EntitySet Name="Comenta" EntityType="Self.Comenta" />
           <EntitySet Name="Costumer" EntityType="Self.Costumer" />
           <EntitySet Name="Credit_card" EntityType="Self.Credit_card" />
-          <EntitySet Name="Custumer" EntityType="Self.Custumer" />
           <EntitySet Name="Orders" EntityType="Self.Orders" />
           <EntitySet Name="Product" EntityType="Self.Product" />
           <EntitySet Name="Producto_por_pedido" EntityType="Self.Producto_por_pedido" />
           <EntitySet Name="Properties" EntityType="Self.Properties" />
-          <EntitySet Name="Property" EntityType="Self.Property" />
+          <EntitySet Name="Property" EntityType="practicaMaDModel.Property" />
           <EntitySet Name="Tag" EntityType="Self.Tag" />
           <AssociationSet Name="category_idFK" Association="Self.category_idFK">
             <End Role="Category" EntitySet="Category" />
@@ -662,23 +628,6 @@
                 <ScalarProperty Name="cvs" ColumnName="cvs" />
                 <ScalarProperty Name="date_pf_expiry" ColumnName="date_pf_expiry" />
                 <ScalarProperty Name="costumer_id" ColumnName="costumer_id" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="Custumer">
-            <EntityTypeMapping TypeName="practicaMaDModel.Custumer">
-              <MappingFragment StoreEntitySet="Custumer">
-                <ScalarProperty Name="custumer_id" ColumnName="custumer_id" />
-                <ScalarProperty Name="custumer_name" ColumnName="custumer_name" />
-                <ScalarProperty Name="custumer_last_name1" ColumnName="custumer_last_name1" />
-                <ScalarProperty Name="custumer_last_name2" ColumnName="custumer_last_name2" />
-                <ScalarProperty Name="direccion" ColumnName="direccion" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="idioma" ColumnName="idioma" />
-                <ScalarProperty Name="country" ColumnName="country" />
-                <ScalarProperty Name="rol" ColumnName="rol" />
-                <ScalarProperty Name="credit_card_default" ColumnName="credit_card_default" />
-                <ScalarProperty Name="custumer_login" ColumnName="custumer_login" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
