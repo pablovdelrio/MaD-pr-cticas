@@ -1,6 +1,8 @@
 ﻿using Es.Udc.DotNet.ModelUtil.Dao;
 using Es.Udc.DotNet.ModelUtil.Exceptions;
 using System;
+using System.Data.Common;
+using System.Linq;
 
 namespace Es.Udc.DotNet.MaDPractica.Model.CostumerDao
 {
@@ -35,11 +37,11 @@ namespace Es.Udc.DotNet.MaDPractica.Model.CostumerDao
 
             #region Option 2: Using eSQL over dbSet
 
-            //string sqlQuery = "Select * FROM Costumer where costumer_id=@costumer_id";
-            //DbParameter costumer_idParameter =
-            //    new System.Data.SqlClient.SqlParameter("costumer_id", costumer_id);
+            string sqlQuery = "Select * FROM Costumer where costumer_id=@costumer_id";
+            DbParameter costumer_idParameter =
+                new System.Data.SqlClient.SqlParameter("costumer_id", costumer_id);
 
-            //costumer = Context.Database.SqlQuery<Costumer>(sqlQuery, costumer_idParameter).FirstOrDefault<Costumer>();
+            costumer = Context.Database.SqlQuery<Costumer>(sqlQuery, costumer_idParameter).FirstOrDefault<Costumer>();
 
             #endregion Option 2: Using eSQL over dbSet
 

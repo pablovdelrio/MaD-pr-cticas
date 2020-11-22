@@ -1,6 +1,8 @@
 ﻿using Es.Udc.DotNet.ModelUtil.Dao;
 using Es.Udc.DotNet.ModelUtil.Exceptions;
 using System;
+using System.Data.Common;
+using System.Linq;
 
 namespace Es.Udc.DotNet.MaDPractica.Model.ProductDao
 {
@@ -35,11 +37,11 @@ namespace Es.Udc.DotNet.MaDPractica.Model.ProductDao
 
             #region Option 2: Using eSQL over dbSet
 
-            //string sqlQuery = "Select * FROM Product where product_id=@product_id";
-            //DbParameter product_idParameter =
-            //    new System.Data.SqlClient.SqlParameter("product_id", product_id);
+            string sqlQuery = "Select * FROM Product where product_id=@product_id";
+            DbParameter product_idParameter =
+                new System.Data.SqlClient.SqlParameter("product_id", product_id);
 
-            //product = Context.Database.SqlQuery<Product>(sqlQuery, product_idParameter).FirstOrDefault<Product>();
+            product = Context.Database.SqlQuery<Product>(sqlQuery, product_idParameter).FirstOrDefault<Product>();
 
             #endregion Option 2: Using eSQL over dbSet
 

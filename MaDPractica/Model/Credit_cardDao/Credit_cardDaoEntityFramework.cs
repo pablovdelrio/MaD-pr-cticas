@@ -1,6 +1,8 @@
 ﻿using Es.Udc.DotNet.ModelUtil.Dao;
 using Es.Udc.DotNet.ModelUtil.Exceptions;
 using System;
+using System.Data.Common;
+using System.Linq;
 
 namespace Es.Udc.DotNet.MaDPractica.Model.Credit_cardDao
 {
@@ -35,11 +37,11 @@ namespace Es.Udc.DotNet.MaDPractica.Model.Credit_cardDao
 
             #region Option 2: Using eSQL over dbSet
 
-            //string sqlQuery = "Select * FROM Credit_card where credit_card_id=@credit_card_id";
-            //DbParameter credit_card_idParameter =
-            //    new System.Data.SqlClient.SqlParameter("credit_card_id", credit_card_id);
+            string sqlQuery = "Select * FROM Credit_card where credit_card_id=@credit_card_id";
+            DbParameter credit_card_idParameter =
+                new System.Data.SqlClient.SqlParameter("credit_card_id", credit_card_id);
 
-            //credit_card = Context.Database.SqlQuery<Credit_card>(sqlQuery, credit_card_idParameter).FirstOrDefault<Credit_card>();
+            credit_card = Context.Database.SqlQuery<Credit_card>(sqlQuery, credit_card_idParameter).FirstOrDefault<Credit_card>();
 
             #endregion Option 2: Using eSQL over dbSet
 

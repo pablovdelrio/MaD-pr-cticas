@@ -1,6 +1,7 @@
 ﻿using Es.Udc.DotNet.ModelUtil.Dao;
 using Es.Udc.DotNet.ModelUtil.Exceptions;
 using System;
+using System.Data.Common;
 
 namespace Es.Udc.DotNet.MaDPractica.Model.TagDao
 {
@@ -35,11 +36,11 @@ namespace Es.Udc.DotNet.MaDPractica.Model.TagDao
 
             #region Option 2: Using eSQL over dbSet
 
-            //string sqlQuery = "Select * FROM Tag where tag_id=@tag_id";
-            //DbParameter tag_idParameter =
-            //    new System.Data.SqlClient.SqlParameter("tag_id", tag_id);
+            string sqlQuery = "Select * FROM Tag where tag_id=@tag_id";
+            DbParameter tag_idParameter =
+                new System.Data.SqlClient.SqlParameter("tag_id", tag_id);
 
-            //tag = Context.Database.SqlQuery<Tag>(sqlQuery, tag_idParameter).FirstOrDefault<Tag>();
+            tag = Context.Database.SqlQuery<Tag>(sqlQuery, tag_idParameter).FirstOrDefault<Tag>();
 
             #endregion Option 2: Using eSQL over dbSet
 

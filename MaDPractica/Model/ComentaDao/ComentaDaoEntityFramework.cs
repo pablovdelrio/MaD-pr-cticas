@@ -1,6 +1,8 @@
 ﻿using Es.Udc.DotNet.ModelUtil.Dao;
 using Es.Udc.DotNet.ModelUtil.Exceptions;
 using System;
+using System.Data.Common;
+using System.Linq;
 
 namespace Es.Udc.DotNet.MaDPractica.Model.ComentaDao
 {
@@ -35,11 +37,11 @@ namespace Es.Udc.DotNet.MaDPractica.Model.ComentaDao
 
             #region Option 2: Using eSQL over dbSet
 
-            //string sqlQuery = "Select * FROM Comenta where comenta_id=@comenta_id";
-            //DbParameter comenta_idParameter =
-            //    new System.Data.SqlClient.SqlParameter("comenta_id", comenta_id);
+            string sqlQuery = "Select * FROM Comenta where comenta_id=@comenta_id";
+            DbParameter comenta_idParameter =
+                new System.Data.SqlClient.SqlParameter("comenta_id", comenta_id);
 
-            //comenta = Context.Database.SqlQuery<Comenta>(sqlQuery, comenta_idParameter).FirstOrDefault<Comenta>();
+            comenta = Context.Database.SqlQuery<Comenta>(sqlQuery, comenta_idParameter).FirstOrDefault<Comenta>();
 
             #endregion Option 2: Using eSQL over dbSet
 

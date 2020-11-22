@@ -38,11 +38,11 @@ namespace Es.Udc.DotNet.MaDPractica.Model.OrdersDao
 
             #region Option 2: Using eSQL over dbSet
 
-            //string sqlQuery = "Select * FROM Orders where orders_id=@orders_id";
-            //DbParameter orders_idParameter =
-            //    new System.Data.SqlClient.SqlParameter("orders_id", orders_id);
+            string sqlQuery = "Select * FROM Orders where orders_id=@orders_id";
+            DbParameter orders_idParameter =
+                new System.Data.SqlClient.SqlParameter("orders_id", orders_id);
 
-            //orders = Context.Database.SqlQuery<Orders>(sqlQuery, orders_idParameter).FirstOrDefault<Orders>();
+            orders = Context.Database.SqlQuery<Orders>(sqlQuery, orders_idParameter).FirstOrDefault<Orders>();
 
             #endregion Option 2: Using eSQL over dbSet
 

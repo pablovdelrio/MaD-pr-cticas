@@ -21,3 +21,7 @@ F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\obj\Debug\Model.cs
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\bin\Debug\ModelUtil.dll
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\bin\Debug\ModelUtil.pdb
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\Model\bin\Debug\ModelUtil.dll.config
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\Model\obj\Debug\Model.csprojAssemblyReference.cache
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\Model\obj\Debug\Model.csproj.CoreCompileInputs.cache
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\Model\obj\Debug\Model.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\Model\obj\Debug\Model.pdb

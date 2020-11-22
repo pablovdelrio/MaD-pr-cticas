@@ -1,6 +1,8 @@
 ﻿using Es.Udc.DotNet.ModelUtil.Dao;
 using Es.Udc.DotNet.ModelUtil.Exceptions;
 using System;
+using System.Data.Common;
+using System.Linq;
 
 namespace Es.Udc.DotNet.MaDPractica.Model.PropertiesDao
 { 
@@ -35,11 +37,11 @@ public class PropertiesDaoEntityFramework :
 
             #region Option 2: Using eSQL over dbSet
 
-            //string sqlQuery = "Select * FROM Properties where properties_id=@properties_id";
-            //DbParameter properties_idParameter =
-            //    new System.Data.SqlClient.SqlParameter("properties_id", properties_id);
+            string sqlQuery = "Select * FROM Properties where properties_id=@properties_id";
+            DbParameter properties_idParameter =
+                new System.Data.SqlClient.SqlParameter("properties_id", properties_id);
 
-            //properties = Context.Database.SqlQuery<Properties>(sqlQuery, properties_idParameter).FirstOrDefault<Properties>();
+            properties = Context.Database.SqlQuery<Properties>(sqlQuery, properties_idParameter).FirstOrDefault<Properties>();
 
             #endregion Option 2: Using eSQL over dbSet
 

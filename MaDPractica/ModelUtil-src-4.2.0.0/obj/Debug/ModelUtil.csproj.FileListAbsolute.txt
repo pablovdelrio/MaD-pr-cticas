@@ -22,3 +22,27 @@ F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\ModelUtil-src-4.2.0.0\bi
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\ModelUtil-src-4.2.0.0\obj\Debug\ModelUtil.csproj.CopyComplete
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\ModelUtil-src-4.2.0.0\obj\Debug\ModelUtil.dll
 F:\deida\Documents\Uni\Q8\MaD\MaD-pr-cticas\MaDPractica\ModelUtil-src-4.2.0.0\obj\Debug\ModelUtil.pdb
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\ModelUtil.dll.config
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\ModelUtil.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\ModelUtil.pdb
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Castle.Core.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\EntityFramework.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Ninject.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Ninject.Extensions.Interception.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Ninject.Extensions.Interception.DynamicProxy.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Castle.Core.xml
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\EntityFramework.xml
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Common.xml
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Microsoft.Practices.EnterpriseLibrary.Logging.xml
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Ninject.xml
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Ninject.Extensions.Interception.xml
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\bin\Debug\Ninject.Extensions.Interception.DynamicProxy.xml
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\obj\Debug\ModelUtil.csprojAssemblyReference.cache
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\obj\Debug\ModelUtil.csproj.CoreCompileInputs.cache
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\obj\Debug\ModelUtil.csproj.CopyComplete
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\obj\Debug\ModelUtil.dll
+C:\Users\Sofía López Rico\OneDrive\Documentos\CLASE 20202019\MaDPractica\MaDPractica\ModelUtil-src-4.2.0.0\obj\Debug\ModelUtil.pdb
